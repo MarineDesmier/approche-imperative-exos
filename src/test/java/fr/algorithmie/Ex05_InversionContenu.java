@@ -1,11 +1,14 @@
 package fr.algorithmie;
 
+import java.util.Arrays;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import outils.Exercice;
 import outils.ExerciceRunner;
 import outils.Question;
+import outils.Resultat;
 
 /** Ne modifiez ni les noms des classes, ni les noms des méthodes.
  * Utilisez Resultat.log pour afficher les résultats
@@ -28,5 +31,15 @@ public class Ex05_InversionContenu {
 		// Pour être plus précis, arrayCopy commence par les nombres suivants : -4, 14, 0, etc..
 		
 		// TODO LOGUER le contenu de ce tableau arrayCopy
+
+		int[] arrayCopy = Arrays.copyOf(array, array.length);
+		
+			for(int i = 0; i < arrayCopy.length/2; i++) {
+				int newArray = arrayCopy[i];
+				arrayCopy[i] = arrayCopy[arrayCopy.length-i-1];
+				arrayCopy[arrayCopy.length-i-1] = newArray;
+			}
+		
+		Resultat.log(arrayCopy);
 	}
 }
