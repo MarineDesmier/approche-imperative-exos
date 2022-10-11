@@ -33,6 +33,10 @@ public class Ex09_SommeDeTableaux {
 		// dont chaque case d’index i contient la somme arithmétique des cases d’index i
 		// des tableaux 1 et 2.
 		// Exemple : somme[i]=tab1[i]+tab2[i]
-	
+		int[] somme = new int[tab1.length];
+		for(int i = 0; i<=somme.length-1; i++) {
+			somme[i] = tab1[i] + tab2[i];
+			Resultat.log(somme[i]);
+		}
 	}
 }
